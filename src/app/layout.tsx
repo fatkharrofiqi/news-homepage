@@ -4,7 +4,23 @@ import "./globals.css";
 import Header from "@/components/header";
 
 const inter = localFont({
-  src: "../../public/fonts/static/Inter-Regular.ttf",
+  src: [
+    {
+      path: "../../public/fonts/static/Inter-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/static/Inter-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/static/Inter-ExtraBold.ttf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
   variable: "--font-inter",
   display: "swap",
 });
@@ -20,12 +36,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-auto">
       <body
-        className={`${inter.className} antialiased min-h-screen bg-white-page`}
+        className={`${inter.className} antialiased min-h-screen bg-white-page relative overflow-x-hidden`}
       >
         <Header />
-        <main>{children}</main>
+        <main className="px-4">{children}</main>
       </body>
     </html>
   );

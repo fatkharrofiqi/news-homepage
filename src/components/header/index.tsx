@@ -11,7 +11,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="relative min-h-screen overflow-x-hidden">
+    <header className="debug">
       <div className="flex justify-between items-center h-[6.25rem] px-4">
         <Image src={Logo} alt="logo" />
         <Image
@@ -23,6 +23,8 @@ export default function Header() {
       </div>
 
       <div
+        onClick={() => setIsOpen(false)}
+        onKeyUp={() => {}}
         className={twMerge(
           "absolute bg-black inset-0 opacity-25 transition-all duration-400 -translate-x-full",
           isOpen ? "translate-x-0" : "",
