@@ -36,9 +36,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="overflow-x-auto">
+    <html lang="en">
       <body
-        className={`${inter.className} antialiased min-h-screen bg-white-page relative overflow-x-hidden`}
+        className={`${inter.className} antialiased min-h-screen bg-white-page`}
       >
         <Header />
         <main className="px-4">{children}</main>

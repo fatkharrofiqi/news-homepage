@@ -11,7 +11,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header>
+    <header className="sticky top-0 left-0 right-0 z-50 bg-white-page">
       <div className="flex justify-between items-center h-[6.25rem] px-4">
         <Image src={Logo} alt="logo" />
         <Image
@@ -26,14 +26,14 @@ export default function Header() {
         onClick={() => setIsOpen(false)}
         onKeyUp={() => {}}
         className={twMerge(
-          "absolute bg-black inset-0 opacity-25 transition-all duration-400 -translate-x-full",
+          "fixed bg-black inset-0 opacity-25 transition-all duration-400 -translate-x-full",
           isOpen ? "translate-x-0" : "",
         )}
       />
 
       <div
         className={twMerge(
-          "absolute top-0 right-0 w-3/5 h-full bg-white-page transition-all duration-500 translate-x-full",
+          "fixed top-0 right-0 w-3/5 h-full bg-white-page transition-all duration-500 translate-x-full",
           isOpen ? "translate-x-0" : "",
         )}
       >
