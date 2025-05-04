@@ -4,7 +4,7 @@ import Trending from "@/components/body/trending";
 
 const page = () => {
   return (
-    <div className="space-y-8">
+    <div className="space-y-14 pb-14">
       <Home />
       <News />
       <Trending />

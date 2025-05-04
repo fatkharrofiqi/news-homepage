@@ -2,7 +2,7 @@ import TrendingItem from "./trending-item";
 
 export default function Trending() {
   return (
-    <div className="space-y-10 pb-10">
+    <div className="space-y-10">
       <TrendingItem
         src="images/image-retro-pcs.jpg"
         number="01"
