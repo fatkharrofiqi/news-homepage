@@ -11,7 +11,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="debug">
+    <header>
       <div className="flex justify-between items-center h-[6.25rem] px-4">
         <Image src={Logo} alt="logo" />
         <Image
