@@ -1,8 +1,13 @@
+import { twMerge } from "tailwind-merge";
 import NewsItem from "./news-item";
 
-export default function News() {
+interface NewsProp {
+  className?: string;
+}
+
+export default function News({ className }: NewsProp) {
   return (
-    <div className="bg-[#00001A] px-7">
+    <div className={twMerge("bg-[#00001A] px-7", className)}>
       <p className="pt-10 font-bold text-3xl text-[#E6A650]">New</p>
       <div className="divide-y-2 divide-gray-600">
         <NewsItem

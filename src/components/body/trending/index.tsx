@@ -1,8 +1,13 @@
+import { twMerge } from "tailwind-merge";
 import TrendingItem from "./trending-item";
 
-export default function Trending() {
+interface TrendingProp {
+  className?: string;
+}
+
+export default function Trending({ className }: TrendingProp) {
   return (
-    <div className="space-y-10">
+    <div className={twMerge("space-y-10", className)}>
       <TrendingItem
         src="images/image-retro-pcs.jpg"
         number="01"

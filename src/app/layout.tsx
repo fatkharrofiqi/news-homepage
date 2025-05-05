@@ -38,10 +38,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} antialiased min-h-screen bg-white-page`}
+        className={`${inter.className} antialiased min-h-screen bg-white-page md:px-32 md:pt-[4.5rem]`}
       >
         <Header />
-        <main className="px-4">{children}</main>
+        <main className="px-4 md:pt-10">{children}</main>
       </body>
     </html>
   );

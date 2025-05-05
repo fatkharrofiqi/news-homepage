@@ -9,6 +9,7 @@ import Logo from "../../../public/images/logo.svg";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const menus = ["Home", "New", "Popular", "Trending", "Categories"];
 
   return (
     <header className="sticky top-0 left-0 right-0 z-50 bg-white-page">
@@ -17,9 +18,14 @@ export default function Header() {
         <Image
           src={IconMenu}
           alt="icon-menu"
-          className="hover:cursor-pointer"
+          className="hover:cursor-pointer lg:hidden"
           onClick={() => setIsOpen(true)}
         />
+        <ul className="font-bold lg:flex lg:flex-row hover:cursor-pointer gap-16 text-gray-500 hidden">
+          {menus.map((value, key) => (
+            <li key={`menu-${key + 1}`}>{value}</li>
+          ))}
+        </ul>
       </div>
 
       <div
@@ -46,11 +52,9 @@ export default function Header() {
           />
         </div>
         <ul className="pt-[4.5rem] space-y-[2.625rem] px-8 font-bold">
-          <li>Home</li>
-          <li>New</li>
-          <li>Popular</li>
-          <li>Trending</li>
-          <li>Categories</li>
+          {menus.map((value, key) => (
+            <li key={`menu-${key + 1}`}>{value}</li>
+          ))}
         </ul>
       </div>
     </header>
