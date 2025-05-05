@@ -30,7 +30,7 @@ export default function Home({ className }: HomeProp) {
           <div>
             <button
               type="button"
-              className="bg-[#F15D51] uppercase font-bold text-gray-800 px-10 py-5"
+              className="bg-[#F15D51] uppercase font-bold text-gray-800 px-10 py-5 hover:cursor-pointer hover:shadow-md transition duration-200"
             >
               Read More
             </button>
